@@ -2,9 +2,11 @@
 Everything inside can be deleted,except pom.xml
 
 2. Create new workspace and initial application
+# ng new
 > ng new angular-tour-of-heroes
 
 3. Serve application
 navigate to angular workspace (angular tour of heroes)
+# ng serve
 > ng serve --open
 
