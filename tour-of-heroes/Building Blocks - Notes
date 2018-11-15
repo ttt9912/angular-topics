@@ -1,0 +1,7 @@
+-----------------------------------------------------------------------------
+Components
+-----------------------------------------------------------------------------
+fundamental building blocks of Angular applications
+    - display data on the screen
+    - listen for user input
+    - take action based on that input

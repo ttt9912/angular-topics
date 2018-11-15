@@ -1,0 +1,28 @@
+- Parent Module - (File->New->Project)
+	groupId: 		ch.ttt
+	artifactId:		angular-topics
+	project name:		angular-topics
+	project location: 	D:\dev\workspace\angular-topics
+	module name: 		angular-topics
+	content root:		D:\dev\workspace\angular-topics
+
+- Modules - (parent->New->Module)
+	groupId: 	ch.ttt
+	artifactId:	tour-of-heroes
+	module name:	tour-of-heroes
+	content root:	D:\dev\workspace\angular-topics\tour-of-heroes
+
+- Package Names -
+	ch.ttt.tourofheroes
+
+	Keine 2 packages dürfen gleich heissen! Auch nicht in unterschiedlichen Modulen
+__________________________________________________________________________
+
+Comments:
+
+   - parent->New->Module automatically updates parent and module poms 
+     with <modules> resp. <parent>
+
+   - delete src folder in parent module
+
+   - use package names with chapter name for non confusing imports
