@@ -1,7 +1,77 @@
 -----------------------------------------------------------------------------
-Components
+Components (.ts)
 -----------------------------------------------------------------------------
-fundamental building blocks of Angular applications
+are the fundamental building blocks of Angular applications
     - display data on the screen
     - listen for user input
     - take action based on that input
+
+create new component:
+    > ng generate component heroes
+
+@Input property:
+    - settable property
+    - value is bound from another component with a property binding [hero]
+
+@Output property:
+    - observable property
+    - always returns an Angular EventEmitter
+    - values flow out of the component as events bound with an event binding
+
+-----------------------------------------------------------------------------
+NgModel
+-----------------------------------------------------------------------------
+- declares metadata (imports, components, etc.)
+- Every component must be declared in exactly one NgModule (done automatically,
+  Angular adds a new Component to the AppModule class)
+
+-----------------------------------------------------------------------------
+Component template (.html)
+-----------------------------------------------------------------------------
+interpolation binding {{x}}:
+    - bind component's property values to the HTML
+
+event binding (x):
+    - (click)="onSelect(hero)"
+
+property binding [x]:
+    - [hero]="selectedHero"
+
+two way binding [(x)]:
+    - [(ngModel)]="hero.name"
+    - binding between <input> and component property
+    - FormsModule is requires
+
+css class binding:
+    - add and remove a CSS class conditionally
+    - [class.selected]="hero === selectedHero"
+
+Directives:
+    - *ngFor: display a list
+    - *ngIf: conditionally include or exclude a block of HTML
+
+-----------------------------------------------------------------------------
+Styles (.css/.scss/.sass)
+-----------------------------------------------------------------------------
+- application-wide styles
+- private styles: either inline in the @Component.styles array or as
+  stylesheet file(s) identified in the @Component.styleUrls array
+
+-----------------------------------------------------------------------------
+Pipes
+-----------------------------------------------------------------------------
+- format strings, currencies, dates and other display data
+- pipe operator: |
+
+-----------------------------------------------------------------------------
+Services
+-----------------------------------------------------------------------------
+- Services are a great way to share information among classes that don't know
+  each other
+- Components -use-> Services
+- Components shouldn't fetch and save data directly or present fake data
+- Services should be injected via DI and not created with 'new'
+
+-----------------------------------------------------------------------------
+Observable Data
+-----------------------------------------------------------------------------
