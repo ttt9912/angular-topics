@@ -10,3 +10,9 @@ navigate to angular workspace (angular tour of heroes)
 # ng serve
 > ng serve --open
 
+-----------------------------------------------------------------------------
+Hints
+-----------------------------------------------------------------------------
+Angular 6 looks for angular.json instead of angular-cli.json
+update cli if ng serve cannot start
+> ng update @angular/cli
