@@ -10,6 +10,16 @@ navigate to angular workspace (angular tour of heroes)
 # ng serve
 > ng serve --open
 
+--- (optional) ---
+Create Services
+> ng generate service hero
+
+Create Router module
+> ng generate module app-routing --flat --module=app
+
+- delete the @NgModule.declarations array and CommonModule references
+- import Routes and RouterModule
+- Export RouterModule via @NgModule.exports array
 -----------------------------------------------------------------------------
 Hints
 -----------------------------------------------------------------------------

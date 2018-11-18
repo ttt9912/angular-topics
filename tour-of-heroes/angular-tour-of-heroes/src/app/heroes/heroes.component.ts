@@ -39,7 +39,20 @@ export class HeroesComponent implements OnInit {
     this.selectedHero = hero;
   }
 
+  /*
+   * assignment occurs synchronously: if the server doesn't return heroes instantly
+   * the browser freezes the UI while waiting
+   */
+  // getHeroes(): void {
+  //   this.heroes = this.heroService.getHeroes();
+  // }
+
+  /*
+   * asynchronous approach: waits for the Observable to emit the array of heroes,
+   * then subscribe passes the emitted array to the callback, which sets the component's heroes property
+   */
   getHeroes(): void {
-    this.heroes = this.heroService.getHeroes();
+    this.heroService.getHeroes()
+      .subscribe(heroes => this.heroes = heroes);
   }
 }

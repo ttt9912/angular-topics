@@ -1,0 +1,16 @@
+<h1>{{title}}</h1>
+
+<!--
+without routing: inserts the heroes.component.html
+<app-heroes></app-heroes>
+-->
+
+<!-- routing: router-outlet tells the router where to display routed views -->
+<nav>
+  <a routerLink="/dashboard">Dashboard</a><br/>
+  <a routerLink="/heroes">Heroes</a>
+</nav>
+<router-outlet></router-outlet>
+
+<app-messages></app-messages>
+

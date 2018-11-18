@@ -7,6 +7,8 @@ import {HeroesComponent} from './heroes/heroes.component';
 import {FormsModule} from '@angular/forms';
 import {HeroDetailComponent} from './hero-detail/hero-detail.component';
 import {MessagesComponent} from './messages/messages.component';
+import {AppRoutingModule} from './app-routing.module';
+import {DashboardComponent} from './dashboard/dashboard.component'; // NgModel lives here
 
 /*
  * @NgModule: decorator function that specifies the Angular metadata (similar to @Component)
@@ -17,11 +19,13 @@ import {MessagesComponent} from './messages/messages.component';
     AppComponent,
     HeroesComponent,
     HeroDetailComponent,
-    MessagesComponent
+    MessagesComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
