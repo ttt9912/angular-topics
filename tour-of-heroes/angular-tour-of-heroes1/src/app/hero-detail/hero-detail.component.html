@@ -1,0 +1,14 @@
+<!-- *ngIf = null check
+             prevents hero.name from failing when hero is undefined
+             When hero is undefined, the ngIf removes the hero detail from the DOM.
+             There are no hero bindings to worry about.-->
+<h2>Click Events () and Null Check with *ngIf</h2>
+<div *ngIf="hero">
+  <h4>{{hero.name}} Details</h4>
+  <div><span>id: </span>{{hero.id}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="hero.name" placeholder="name">
+    </label>
+  </div>
+</div>
