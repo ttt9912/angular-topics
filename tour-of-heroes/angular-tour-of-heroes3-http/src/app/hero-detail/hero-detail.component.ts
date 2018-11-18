@@ -4,14 +4,6 @@ import {ActivatedRoute} from "@angular/router";
 import {HeroService} from "../hero/hero.service";
 import {Location} from '@angular/common';
 
-/*
- *  ActivatedRoute: holds information about the route to this instance
- *
- *  route.snapshot: static image of the route information shortly after
- *                  the component was created
- *
- * location: Angular service for interacting with the browser
- */
 @Component({
   selector: 'app-hero-detail',
   templateUrl: './hero-detail.component.html',
@@ -43,6 +35,11 @@ export class HeroDetailComponent implements OnInit {
   // navigates backward one step in the browser's history stack
   goBack(): void {
     this.location.back();
+  }
+
+  save(): void {
+    this.heroService.updateHero(this.hero)
+      .subscribe(() => this.goBack());
   }
 
 }

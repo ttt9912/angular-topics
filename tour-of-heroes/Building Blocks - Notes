@@ -86,3 +86,4 @@ create routing module and import it in the root AppModule
     > ng generate module app-routing --flat --module=app
     flat: puts the file in src/app instead of its own folder.
     module=app: registers it in the imports array of the AppModule
+

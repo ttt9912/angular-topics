@@ -8,7 +8,6 @@ import {MessageService} from "../message/message.service";
 })
 export class MessagesComponent implements OnInit {
 
-  // messageService must be public because the template will bind to it
   constructor(public messageService: MessageService) {
   }
 

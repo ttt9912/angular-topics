@@ -15,11 +15,16 @@ Create Services
 > ng generate service hero
 
 Create Router module
-> ng generate module app-routing --flat --module=app
-
 - delete the @NgModule.declarations array and CommonModule references
 - import Routes and RouterModule
 - Export RouterModule via @NgModule.exports array
+> ng generate module app-routing --flat --module=app
+
+Setup In-memory Http Server
+In-memory Web API intercepts requests from the HttpClient, applying them
+to an in-memory data store, and returning simulated responses
+> npm install angular-in-memory-web-api --save
+
 -----------------------------------------------------------------------------
 Hints
 -----------------------------------------------------------------------------
