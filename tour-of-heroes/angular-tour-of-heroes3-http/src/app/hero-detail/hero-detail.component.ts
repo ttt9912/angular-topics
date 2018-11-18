@@ -32,14 +32,17 @@ export class HeroDetailComponent implements OnInit {
       .subscribe(hero => this.hero = hero);
   }
 
+  save(): void {
+    this.heroService.updateHero(this.hero)
+      .subscribe(
+        // () => this.goBack() optional
+      );
+  }
+
   // navigates backward one step in the browser's history stack
   goBack(): void {
     this.location.back();
   }
 
-  save(): void {
-    this.heroService.updateHero(this.hero)
-      .subscribe(() => this.goBack());
-  }
 
 }

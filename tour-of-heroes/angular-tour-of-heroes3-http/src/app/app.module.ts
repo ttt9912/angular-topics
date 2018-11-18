@@ -9,7 +9,8 @@ import {AppRoutingModule} from './app-routing.module';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {HttpClientModule} from "@angular/common/http";
 import {HttpClientInMemoryWebApiModule} from 'angular-in-memory-web-api';
-import {InMemoryDataService} from './hero/in-memory-data.service';
+import {InMemoryDataService} from './in-memory-data/in-memory-data.service';
+import {HeroSearchComponent} from './hero-search/hero-search.component';
 
 /*
  * HttpClient(-Module): communicating with a remote server over HTTP
@@ -25,7 +26,8 @@ import {InMemoryDataService} from './hero/in-memory-data.service';
     HeroesComponent,
     HeroDetailComponent,
     MessagesComponent,
-    DashboardComponent
+    DashboardComponent,
+    HeroSearchComponent
   ],
   imports: [
     BrowserModule,

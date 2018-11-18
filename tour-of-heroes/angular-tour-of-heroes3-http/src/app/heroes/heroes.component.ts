@@ -34,4 +34,16 @@ export class HeroesComponent implements OnInit {
         this.heroes.push(hero);
       });
   }
+
+  /*
+   * NOTE: Although the component delegates hero deletion to the HeroService,
+   * it remains responsible for updating its own list of heroes
+   *
+   * There's really nothing for the component to do with the Observable returned by heroService.delete().
+   * It must subscribe anyway, otherwise the service will not send the delete request to the server!
+   */
+  deleteHero(hero: Hero): void {
+    this.heroes = this.heroes.filter(h => h !== hero);
+    this.heroService.deleteHero(hero).subscribe();
+  }
 }

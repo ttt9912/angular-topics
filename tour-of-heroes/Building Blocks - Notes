@@ -53,7 +53,7 @@ Directives:
 -----------------------------------------------------------------------------
 Styles (.css/.scss/.sass)
 -----------------------------------------------------------------------------
-- application-wide styles
+- application-wide styles: src/styles.css
 - private styles: either inline in the @Component.styles array or as
   stylesheet file(s) identified in the @Component.styleUrls array
 
@@ -75,7 +75,7 @@ Services
 -----------------------------------------------------------------------------
 Observable Data
 -----------------------------------------------------------------------------
-
+- Observable does nothing until something subscribes
 
 -----------------------------------------------------------------------------
 AppRoutingModule
